@@ -41,6 +41,54 @@
             height: 100%;
             margin: 0;
         }
+
+        @media only screen and (max-width: 837px) {
+            .mobile-view {
+                display: inherit;
+                visibility: visible;
+            }
+
+            #login-card {
+                background: rgba(0, 0, 0, 0.774);
+            }
+
+            #login-page-bg {
+                visibility: collapse;
+                width: 0%;
+            }
+
+            #login-page-left {
+                width: 100%;
+                background: url(images/login.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+
+            #email,
+            #password {
+                color: white;
+            }
+
+            #email::placeholder,
+            #password::placeholder {
+                color: white;
+            }
+
+            .login-op-container button {
+                max-width: 50.2vw;
+                min-width: 246px;
+            }
+
+            .login-lower-text {
+                font-size: 2.1vw;
+            }
+        }
+
+        @media only screen and (max-width: 635px) {
+            #login-card {
+                padding: 20px 50px;
+            }
+        }
     </style>
 </head>
 
@@ -48,7 +96,7 @@
     <section class="entire-screenwide">
         <div id="login-page-left">
             <div id="login-title">
-                <img src="logos/TLW.png" width="230.49px" height="65px">
+                <img class="login-brand" src="logos/TLW.png" width="230.49px" height="65px">
             </div>
             <div id="login-container">
                 <div id="login-card">
@@ -101,14 +149,17 @@
                     </div>
                 </div>
             </div>
+            <div class="login-lower-shadow mobile-view">
+                <p class="login-lower-text">&copy 2024 FoodDrop Philippines, Inc. All Rights Reserved</p>
+            </div>
         </div>
         <div id="login-page-bg">
-            <div id="login-upper-shadow">
-                <p id="login-upper-text">Don't have an account? &nbsp&nbsp<a href="signup.html"><button type="button"
+            <div class="login-upper-shadow">
+                <p class="login-upper-text">Don't have an account? &nbsp&nbsp<a href="signup.html"><button type="button"
                             class="btn btn-outline-light">Sign Up</button></a></p>
             </div>
-            <div id="login-lower-shadow">
-                <p id="login-lower-text">&copy 2024 FoodDrop Philippines, Inc. All Rights Reserved</p>
+            <div class="login-lower-shadow">
+                <p class="login-lower-text">&copy 2024 FoodDrop Philippines, Inc. All Rights Reserved</p>
             </div>
         </div>
     </section>
