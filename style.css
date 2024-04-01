@@ -8,6 +8,11 @@
     src: url(fonts/garet/Garet-Book.woff2);
 }
 
+@font-face {   
+    font-family: "Garet Bold";
+    src: url(fonts/garet/Garet-Heavy.woff2);
+}
+
 /* Navigation Bar */
 .navbar-container {
     font-family: "Garet";
@@ -20,7 +25,7 @@
     height: 60px;
     width: 100%;
     background: rgb(99,230,88);
-    background: linear-gradient(135deg, rgba(99,230,88,1) 0%, rgba(101,244,141,1) 33%, rgba(76,235,192,1) 66%, rgba(133,255,231,1) 100%);
+    background: linear-gradient(135deg, rgba(99,230,88,1) 0%, rgba(101,244,141,1) 33%, rgba(76,235,192,1) 66%, rgb(116, 221, 200) 100%);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
@@ -91,6 +96,7 @@
     background-color: white;
     border-radius: 4px;
 
+    cursor: default;
     font-family: "Garet";
 }
 
@@ -162,7 +168,7 @@ section.entire-screenwide {
 }
 
 #login-title {
-    margin: 20px 0px;
+    margin: 2vh 0vh;
     position: relative;
     width: 90%;
     height: 100px;
@@ -179,13 +185,180 @@ section.entire-screenwide {
 
 #login-card {
     position: relative;
-    padding: 10px 30px;
+    padding: 40px 70px;
     width: 90%;
     height: 90%;
 
     background: rgba(255, 255, 255, 0.24);
     border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+#login-welcome h2 {
+    color: white;
+    font-family: "Nunito Sans", sans-serif;
+    letter-spacing: -0.03em;
+}
+
+.form-group {
+    height: 40px;
+    position: relative;
+    margin-bottom: 2vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#email, #password {
+    border: solid 2px white;
+    background-color: rgba(255, 255, 255, 0.438);
+
+    color: rgb(41, 41, 41);
+    font-family: "Nunito Sans", sans-serif;
+
+    position: absolute;
+    z-index: 5;
+}
+
+#email::placeholder, #password::placeholder {
+    color: rgb(105, 124, 106);
+}
+
+#email:focus, #password:focus {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.error-message {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    z-index: 6;
+
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 0.89em;
+    border: solid 2px white;
+    background: linear-gradient(135deg, rgb(182, 240, 199) 0%, rgb(164, 230, 212) 100%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 15px;
+    border-radius: 6px;
+    height: 50px;
+    width: 50%;
+    color: rgb(56, 56, 56);
+}
+
+#email-error, #pass-error {
+    visibility: collapse;
+}
+
+.form-check {
+    position: relative;
+    margin-bottom: 2vh;
+}
+
+.form-check-label {
+    font-family: "Nunito Sans", sans-serif;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#rememberMe {
+    border: solid 2px white;
+    background-color: rgba(255, 255, 255, 0.438);
+    box-shadow: none;
+    color: rgb(56, 56, 56);
+}
+
+#rememberMe:checked {
+    filter: invert(100%) hue-rotate(18deg) brightness(1.7);
+}
+
+.form-login {
+    position: relative;
+    margin-bottom: 2vh;
+}
+
+#login-login {
+    background-color: rgb(245, 245, 245);
+    border-radius: 6px;
+    height: 40px;
+    width: 30%;
+    min-width: 130px;
+    color: rgb(105, 105, 105);
+}
+
+#login-login:hover {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+}
+
+#forgot-pass {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#login-other-options {
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#login-op-divider {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    margin-bottom: 2vh;
+}
+
+#login-op-divider h6{
+    margin: 0 auto;
+    padding: 0 1.6vh;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.login-op {
+    background-color: #ffffff80;
+    border-radius: 5px;
+    width: 100%;
+    height: 3px;
+}
+
+.login-op-container {
+    margin: 0.5vh 0;
+}
+
+.login-op-container button {
+    max-width: 27vw;
+    min-width: 24vw;
+}
+
+.login-fb {
+    background-color: rgb(3, 41, 255);
+    color: white;
+}
+
+.login-google {
+    background-color: rgb(245, 245, 245);
+    color: rgb(51, 51, 51);
+}
+
+.login-fb:hover {
+    background-color: rgb(64, 93, 255);
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+}
+
+.login-google:hover {
+    background-color: white;
+    color: rgb(51, 51, 51);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
 }
 
 #login-page-bg {
