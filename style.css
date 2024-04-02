@@ -3,12 +3,16 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: rgb(240, 255, 241);
+}
+
 @font-face {
     font-family: "Garet";
     src: url(fonts/garet/Garet-Book.woff2);
 }
 
-@font-face {   
+@font-face {
     font-family: "Garet Bold";
     src: url(fonts/garet/Garet-Heavy.woff2);
 }
@@ -24,19 +28,28 @@
     margin: 0 auto;
     position: fixed;
 
+    z-index: 999;
+
     display: flex;
     justify-content: center;
 
     height: 60px;
     width: 100%;
-    background: rgb(99,230,88);
-    background: linear-gradient(135deg, rgba(99,230,88,1) 0%, rgba(101,244,141,1) 33%, rgba(76,235,192,1) 66%, rgb(116, 221, 200) 100%);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    background: rgb(99, 230, 88);
+    background: linear-gradient(135deg, rgba(99, 230, 88, 1) 0%, rgba(101, 244, 141, 1) 33%, rgba(76, 235, 192, 1) 66%, rgba(95, 180, 163, 1) 100%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
+
+.navbar-container.home-page {
+    background: linear-gradient(135deg, rgba(99, 230, 88, 0.5) 0%, rgba(101, 244, 141, 0.89) 33%, rgba(76, 235, 192, 0.89) 66%, rgba(95, 180, 163, 0.5) 100%);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 25px -5px, rgba(0, 0, 0, 0.14) 0px 10px 10px -5px;
 }
 
 .navbar-edges {
     margin: 0 auto;
     position: absolute;
+    padding: 0 2.8vh;
 
     height: 100%;
     width: 100%;
@@ -96,7 +109,8 @@
     color: white;
 }
 
-.onpage, .onpage:hover {
+.onpage,
+.onpage:hover {
     border: solid 0.6px white;
     background-color: white;
     border-radius: 4px;
@@ -105,23 +119,28 @@
     font-family: "Garet";
 }
 
-.on-home, .on-home:hover {
-    color: rgb(99,230,88);
+.on-home,
+.on-home:hover {
+    color: rgb(99, 230, 88);
 }
 
-.on-donate, .on-donate:hover {
+.on-donate,
+.on-donate:hover {
     color: rgb(112, 236, 133);
 }
 
-.on-market, .on-market:hover {
+.on-market,
+.on-market:hover {
     color: rgb(101, 244, 173);
 }
 
-.on-about, .on-about:hover {
-    color: rgb(76,235,192);
+.on-about,
+.on-about:hover {
+    color: rgb(76, 235, 192);
 }
 
-.on-contact, .on-contact:hover {
+.on-contact,
+.on-contact:hover {
     color: rgb(102, 233, 207);
 }
 
@@ -131,8 +150,8 @@
     padding-top: 60px;
     height: 85vh;
     width: 100%;
-    background: rgb(99,230,88);
-    background: linear-gradient(135deg, rgb(159, 219, 154) 0%, rgb(182, 240, 199) 33%, rgb(164, 230, 212) 66%, rgb(177, 250, 235) 100%);
+    background: rgb(99, 230, 88);
+    background: linear-gradient(135deg, rgb(159, 219, 154) 0%, rgb(182, 240, 199) 33%, rgb(131, 185, 171) 66%, rgb(177, 250, 235) 100%);
     background: url(images/login.jpg);
 
     background-size: cover;
@@ -141,6 +160,65 @@
 
     color: white;
     font-family: "Nunito Sans", sans-serif;
+}
+
+/* Donations.html */
+section#donate-page {
+    margin: 0 auto;
+    padding: calc(60px + 2.8vh) 2.8vw;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#donate-header {
+    margin: 0 auto;
+    height: 38vh;
+    width: 100%;
+
+    color: white;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+#donate-carousel,
+.donate-carousel-item {
+    height: 100%;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.donate-carousel-item {
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.donate-carousel {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+#donor1,
+#donor2,
+#donor3 {
+    border-radius: 8px 8px 0 0;
+    height: 100%;
+    width: 100%;
+    background: url(images/login.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#donor2 {
+    height: 100%;
+    width: 100%;
+    background: url(images/donor2.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 /* Login.html */
@@ -161,10 +239,10 @@ section.entire-screenwide {
 #login-page-left {
     margin: 0 auto;
     position: relative;
-    
+
     width: 45%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(99,230,88,1) 0%, rgba(101,244,141,1) 33%, rgba(76,235,192,1) 66%, rgba(133,255,231,1) 100%);
+    background: linear-gradient(135deg, rgba(99, 230, 88, 1) 0%, rgba(101, 244, 141, 1) 33%, rgba(76, 235, 192, 1) 66%, rgba(133, 255, 231, 1) 100%);
 
     display: flex;
     align-items: center;
@@ -193,16 +271,19 @@ section.entire-screenwide {
 
 #login-card {
     position: relative;
-    padding: 40px 70px;
+    padding: 2.14vh 4.39vw;
     width: 90%;
-    height: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 
     background: rgba(255, 255, 255, 0.24);
     border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
-#login-welcome h2 {
+#login-fields h2 {
     color: white;
     font-family: "Nunito Sans", sans-serif;
     letter-spacing: -0.03em;
@@ -218,7 +299,8 @@ section.entire-screenwide {
     justify-content: flex-end;
 }
 
-#email, #password {
+#email,
+#password {
     border: solid 2px white;
     background-color: rgba(255, 255, 255, 0.438);
 
@@ -229,11 +311,13 @@ section.entire-screenwide {
     z-index: 5;
 }
 
-#email::placeholder, #password::placeholder {
+#email::placeholder,
+#password::placeholder {
     color: rgb(64, 65, 64);
 }
 
-#email:focus, #password:focus {
+#email:focus,
+#password:focus {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -255,7 +339,8 @@ section.entire-screenwide {
     color: rgb(56, 56, 56);
 }
 
-#email-error, #pass-error {
+#email-error,
+#pass-error {
     visibility: collapse;
 }
 
@@ -309,12 +394,23 @@ section.entire-screenwide {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+#login-signup {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-align: center;
+}
+
 #login-other-options {
     margin: 0 auto;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    width: 100%;
 }
 
 #login-op-divider {
@@ -328,7 +424,7 @@ section.entire-screenwide {
     margin-bottom: 2vh;
 }
 
-#login-op-divider h6{
+#login-op-divider h6 {
     margin: 0 auto;
     padding: 0 1.6vh;
     color: white;
@@ -344,6 +440,10 @@ section.entire-screenwide {
 
 .login-op-container {
     margin: 0.5vh 0;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .login-op-container button {
@@ -356,18 +456,30 @@ section.entire-screenwide {
     color: white;
 }
 
-.login-google {
-    background-color: rgb(245, 245, 245);
-    color: rgb(51, 51, 51);
-}
-
 .login-fb:hover {
     background-color: rgb(1, 31, 202);
     color: white;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
 }
 
+.login-fb:active:focus {
+    background-color: rgb(1, 31, 202);
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+}
+
+.login-google {
+    background-color: rgb(245, 245, 245);
+    color: rgb(51, 51, 51);
+}
+
 .login-google:hover {
+    background-color: white;
+    color: rgb(51, 51, 51);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+}
+
+.login-google:active:focus {
     background-color: white;
     color: rgb(51, 51, 51);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
@@ -391,7 +503,7 @@ section.entire-screenwide {
 .login-upper-shadow {
     width: 100%;
     height: 70px;
-    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
 
     display: flex;
     align-content: flex-end;
@@ -402,8 +514,8 @@ section.entire-screenwide {
 .login-lower-shadow {
     width: 100%;
     height: 70px;
-    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
-    
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+
     display: flex;
     align-content: flex-end;
     flex-wrap: wrap;
