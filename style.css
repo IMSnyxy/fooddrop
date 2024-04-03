@@ -22,6 +22,242 @@ body {
     visibility: collapse;
 }
 
+/* Carousel */
+.carousel-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item-head {
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.65) 60%, rgba(255,255,255,0) 100%);
+    width: 75%;
+    height: 100%;
+    
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.carousel-item-text {
+    width: 75%;
+    height: 100%;
+    
+    padding: 0 14vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.carousel-item-text h3 {
+    font-style: "Nunito Sans", sans-serif;
+    font-size: calc(1.12rem + 1vw);
+    line-height: 1em;
+}
+
+.carousel-item-text h6 {
+    font-style: "Nunito Sans", sans-serif;
+    color: rgb(202, 202, 202);
+    font-size: calc(0.5rem + 0.4vw);
+}
+
+.carousel-item-emp {
+    width: 25%;
+    height: 100%;
+}
+
+/* Cards */
+.card-body {
+    padding: 2vh calc(0.91rem + 0.3vw);
+    width: 100%;
+    height: 60%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+}
+
+.card-img {
+    margin: 0 auto;
+    width: 100%;
+    height: 40%;
+    border-radius: 3px 3px 0 0;
+}
+
+.card-title {
+    margin: 0 0 1vh 0;
+    width: 100%;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: bold;
+    font-size: calc(0.89rem + 0.3vw);
+}
+
+.card-location {
+    margin: 0 0 1vh 0;
+    width: 100%;
+    color: rgb(2, 151, 2);
+    font-size: calc(0.56rem + 0.3vw);
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: bold;
+}
+
+.card-h-index {
+    margin: 0 0 1vh 0;
+    width: 100%;
+    color: rgb(52, 150, 52);
+    font-size: calc(0.56rem + 0.3vw);
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: bold;
+}
+
+.card-rating {
+    margin: 0 0 1vh 0;
+    width: 100%;
+    color: rgb(75, 202, 160);
+    font-size: calc(0.56rem + 0.3vw);
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: bold;
+}
+
+.card-text {
+    width: 100%;
+    font-size: calc(0.52rem + 0.3vw);
+    line-height: calc(0.57rem + 0.8vh);
+}
+
+#comm1 {
+    background: url(images/comm1.png);
+}
+
+#comm2 {
+    background: url(images/comm2.png);
+}
+
+#comm3 {
+    background: url(images/comm3.png);
+}
+
+#comm4 {
+    background: url(images/comm4.png);
+}
+
+#org1 {
+    background: url(images/org1.jpg);
+}
+
+#org2 {
+    background: url(images/org2.jpg);
+}
+
+#org3 {
+    background: url(images/org3.jpg);
+}
+
+#org4 {
+    background: url(images/org4.jpg);
+}
+
+#surhead1 {
+    background: url(images/surhead1.jpg);
+}
+
+#surhead2 {
+    background: url(images/surhead2.jpg);
+}
+
+#surhead3 {
+    background: url(images/surhead3.jpg);
+}
+
+#sur1 {
+    background: url(images/sur1.png);
+}
+
+#sur2 {
+    background: url(images/sur2.png);
+}
+
+#sur3 {
+    background: url(images/sur3.png);
+}
+
+#sur4 {
+    background: url(images/sur4.png);
+}
+
+#sur5 {
+    background: url(images/sur5.png);
+}
+
+#sur6 {
+    background: url(images/sur6.jpg);
+}
+
+#sur7 {
+    background: url(images/sur7.jpg);
+}
+
+#sur8 {
+    background: url(images/sur8.jpg);
+}
+
+#sur9 {
+    background: url(images/sur9.png);
+}
+
+#sur10 {
+    background: url(images/sur10.jpg);
+}
+
+#sur11 {
+    background: url(images/sur11.jpg);
+}
+
+#sur12 {
+    background: url(images/sur12.jpg);
+}
+
+#comm1,
+#comm2,
+#comm3,
+#comm4,
+#org1,
+#org2,
+#org3,
+#org4,
+#surhead1,
+#surhead2,
+#surhead3,
+#sur1,
+#sur2,
+#sur3,
+#sur4,
+#sur5,
+#sur6,
+#sur7,
+#sur8,
+#sur9,
+#sur10,
+#sur11,
+#sur12 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 /* Navigation Bar */
 .navbar-container {
     font-family: "Garet";
@@ -36,20 +272,20 @@ body {
     height: 60px;
     width: 100%;
     background: rgb(99, 230, 88);
-    background: linear-gradient(135deg, rgba(99, 230, 88, 1) 0%, rgba(101, 244, 141, 1) 33%, rgba(76, 235, 192, 1) 66%, rgba(95, 180, 163, 1) 100%);
+    background: linear-gradient(135deg, rgba(99, 230, 88, 1) 0%, rgba(101, 244, 141, 1) 33%, rgba(76, 235, 192, 1) 66%, rgb(110, 230, 206) 100%);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    
+
 }
 
 .navbar-container.home-page {
-    background: linear-gradient(135deg, rgba(99, 230, 88, 0.5) 0%, rgba(101, 244, 141, 0.89) 33%, rgba(76, 235, 192, 0.89) 66%, rgba(95, 180, 163, 0.5) 100%);
+    background: linear-gradient(135deg, rgba(99, 230, 88, 0.5) 0%, rgba(101, 244, 141, 0.89) 33%, rgba(76, 235, 192, 0.89) 66%, rgba(116, 255, 227, 0.5) 100%);
     box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 25px -5px, rgba(0, 0, 0, 0.14) 0px 10px 10px -5px;
 }
 
 .navbar-edges {
     margin: 0 auto;
     position: absolute;
-    padding: 0 2.8vh;
+    padding: 0 4vw;
 
     height: 100%;
     width: 100%;
@@ -72,12 +308,14 @@ body {
     position: absolute;
 
     height: 100%;
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    font-size: calc(0.7em + 0.3vw);
 }
 
 .nav-item {
@@ -165,10 +403,9 @@ body {
 /* Donations.html */
 section#donate-page {
     margin: 0 auto;
-    padding: calc(60px + 2.8vh) 2.8vw;
+    padding: 60px 4.6vw;
     position: relative;
     width: 100%;
-    height: 100%;
 
     display: flex;
     flex-direction: column;
@@ -176,8 +413,8 @@ section#donate-page {
 }
 
 #donate-header {
-    margin: 0 auto;
-    height: 38vh;
+    margin: 2vh 0 0vh 0;
+    height: 34vh;
     width: 100%;
 
     color: white;
@@ -208,18 +445,97 @@ section#donate-page {
     border-radius: 8px 8px 0 0;
     height: 100%;
     width: 100%;
-    background: url(images/login.jpg);
+}
+
+#donor1 {
+    background: url(images/donor1.jpg);
     background-size: cover;
-    background-position: center;
+    background-position-x: center;
+    background-position-y: 10%;
+    background-repeat: no-repeat;
 }
 
 #donor2 {
-    height: 100%;
-    width: 100%;
     background: url(images/donor2.jpg);
     background-size: cover;
-    background-position: center;
+    background-position-x: center;
+    background-position-y: 25%;
+    background-repeat: no-repeat;
 }
+
+#donor3 {
+    background: url(images/donor3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.donate-card-section {
+    width: 100%;
+    margin: 3.8vh 0;
+    position: relative;
+}
+
+.section-two {
+    margin: 2vh 0;
+}
+
+.donate-card-section h2 {
+    margin: 1.8vh 0 1.2vh 3.4vh;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: bold;
+    color: rgb(32, 36, 32);
+}
+
+.donate-card-row {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.donate-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 18.73vw;
+    height: 23.96vw;
+    min-width: 200px;
+    min-height: 330px;
+    margin: 2.4vh 1vw;
+}
+
+/* Surplus.html */
+#surplus-carousel,
+.surplus-carousel-item {
+    height: 100%;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.surplus-carousel-item {
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.surplus-carousel {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+#surhead1,
+#surhead2,
+#surhead3 {
+    border-radius: 8px 8px 0 0;
+    height: 100%;
+    width: 100%;
+}
+
 
 /* Login.html */
 section.entire-screenwide {
@@ -540,4 +856,44 @@ section.entire-screenwide {
     font-family: "Nunito Sans", sans-serif;
     font-weight: 500;
     font-size: 15px;
+}
+
+/* Void.html */
+#void-page {
+    position: relative;
+    padding: 0 5vh 7vh 5vh;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#void-text {
+    margin: 3vh 0;
+}
+
+#void-text h3 {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: calc(1.12rem + 1vw);
+}
+
+#void-text h4 {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: calc(0.8rem + 1vw);
+}
+
+#void-text h6 {
+    font-size: calc(0.5rem + 0.4vw);
+}
+
+#void-logo {
+    width: 18.84vw;
+    height: 5.3vw;
+    min-width: 200px;
+    min-height: 56.59px;
+    background: url(logos/TLB.png);
+    background-size: cover;
 }
