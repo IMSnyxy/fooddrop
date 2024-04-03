@@ -36,6 +36,24 @@
             height: 100%;
             margin: 0;
         }
+
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        @media only screen and (max-width: 752px) {
+            .carousel-home-emp {
+                display: none;
+                visibility: collapse;
+            }
+
+            .carousel-home-text {
+                width: 100%;
+                text-align: center;
+                padding: 0 12vw 20vh;
+            }
+        }
     </style>
 </head>
 
@@ -70,9 +88,104 @@
     </nav>
 
 
-    <section id="home-header">hi
-
-    </section>
+    <div id="home-page" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                aria-label="Slide 6"></button>
+        </div>
+        <div class="carousel-inner" id="home-carousel">
+            <div class="carousel-item home-carousel-item active">
+                <div class="carousel-container" id="home2">
+                    <div class="carousel-item-home">
+                        <div class="carousel-home-text">
+                            <h3>It's time to give back</h3>
+                            <h6>Let's donate food to the hungry children and people of the communities suffering
+                                from hunger. Together, we can end food insecurity and hunger with every donation
+                                that you can make.</h6>
+                            <a href="donations.html">
+                                    <button type="button" class="btn btn-outline-light">Go to Donation Hub</button></a>
+                        </div>
+                        <div class="carousel-home-emp">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item home-carousel-item">
+                <div class="carousel-container" id="home3">
+                    <div class="carousel-item-home">
+                        <div class="carousel-home-text">
+                            <h3>Save More, Eat Well</h3>
+                            <h6>Save money by buying surplus food for cheaper. FoodDrop aims to reduce food wastage from overproduction and unsold surplus by encouraging not to throw them away and instead selling them for people who are willing to save money for cheaper meals.
+                            </h6>
+                            <a href="surplus.html">
+                                    <button type="button" class="btn btn-outline-light">Go to Surplus Market</button></a>
+                        </div>
+                        <div class="carousel-home-emp">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item home-carousel-item">
+                <div class="carousel-container" id="home1">
+                    <div class="carousel-item-home">
+                        <div class="carousel-home-text">
+                            <h3>Making an impact for the community</h3>
+                            <h6>FoodDrop allows you to buy surplus food to prevent food wastage and donate them to the hungry communities. Together, we can end food insecurity and hunger with every donation
+                                that you can make. Every action, every donation - a step closer to ending food insecurity and hunger.</h6>
+                        </div>
+                        <div class="carousel-home-emp">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item home-carousel-item">
+                <div class="carousel-container" id="home4">
+                    <div class="carousel-item-home">
+                        <div class="carousel-home-text">
+                            <h3>What we do</h3>
+                            <h6>Know more about us, our mission and vision, and our ultimatum.</h6>
+                            <a href="donations.html">
+                                <button type="button" class="btn btn-outline-light">About Us</button></a>
+                        </div>
+                        <div class="carousel-home-emp">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item home-carousel-item">
+                <div class="carousel-container" id="home5">
+                    <div class="carousel-item-home">
+                        <div class="carousel-home-text">
+                            <h3>Direct with us</h3>
+                            <h6>Willing to help achieve our cause? Here are our contacts:</h6>
+                                <a href="donations.html">
+                                    <button type="button" class="btn btn-outline-light">Contact Us</button></a>
+                        </div>
+                        <div class="carousel-home-emp">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#home-page" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#home-page" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

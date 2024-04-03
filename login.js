@@ -59,7 +59,7 @@ function validateLogin() {
     else if (validateEmail(email) && password !== '') {
         document.getElementById("email-error").style.visibility = "collapse";
         document.getElementById("pass-error").style.visibility = "collapse";
-        window.location.href = 'https://imsnyxy.github.io/';
+        window.location.href = 'https://imsnyxy.github.io/fooddrop/donations.html';
     }
 
 }

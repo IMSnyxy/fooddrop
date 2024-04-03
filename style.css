@@ -38,12 +38,17 @@ body {
     height: 100%;
 }
 
+.carousel-inner {
+    border-radius: 10px;
+}
+
 .carousel-item-head {
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.65) 60%, rgba(255,255,255,0) 100%);
+    border-radius: 10px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.65) 60%, rgba(255, 255, 255, 0) 100%);
     width: 75%;
     height: 100%;
-    
+
     position: relative;
     display: flex;
     flex-direction: row;
@@ -54,7 +59,7 @@ body {
 .carousel-item-text {
     width: 75%;
     height: 100%;
-    
+
     padding: 0 14vw;
     position: relative;
     display: flex;
@@ -144,6 +149,30 @@ body {
     width: 100%;
     font-size: calc(0.52rem + 0.3vw);
     line-height: calc(0.57rem + 0.8vh);
+}
+
+#home1 {
+    background: url(images/home1.png);
+}
+
+#home2 {
+    background: url(images/login.jpg);
+}
+
+#home3 {
+    background: url(images/home3.jpg);
+}
+
+#home4 {
+    background: url(images/home4.jpg);
+}
+
+#home5 {
+    background: url(images/home5.jpg);
+}
+
+#home6 {
+    background: url(images/home6.jpg);
 }
 
 #comm1 {
@@ -238,6 +267,12 @@ body {
     background: url(images/sur12.jpg);
 }
 
+#home1,
+#home2,
+#home3,
+#home4,
+#home5,
+#home6,
 #comm1,
 #comm2,
 #comm3,
@@ -286,7 +321,7 @@ body {
 }
 
 .navbar-container.home-page {
-    background: linear-gradient(135deg, rgba(99, 230, 88, 0.5) 0%, rgba(101, 244, 141, 0.89) 33%, rgba(76, 235, 192, 0.89) 66%, rgba(116, 255, 227, 0.5) 100%);
+    background: linear-gradient(135deg, rgba(100, 230, 88, 0.911) 0%, rgba(101, 244, 141, 0.89) 33%, rgba(76, 235, 192, 0.89) 66%, rgba(116, 255, 227, 0.5) 100%);
     box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 25px -5px, rgba(0, 0, 0, 0.14) 0px 10px 10px -5px;
 }
 
@@ -391,21 +426,89 @@ body {
 }
 
 /* Home.html */
-#home-header {
+#home-page {
     margin: 0 auto;
-    padding-top: 60px;
-    height: 85vh;
+    height: 100vh;
     width: 100%;
     background: rgb(99, 230, 88);
     background: linear-gradient(135deg, rgb(159, 219, 154) 0%, rgb(182, 240, 199) 33%, rgb(131, 185, 171) 66%, rgb(177, 250, 235) 100%);
-    background: url(images/login.jpg);
-
-    background-size: cover;
-    background-position: center;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 
     color: white;
     font-family: "Nunito Sans", sans-serif;
+
+    position: relative;
+}
+
+#home-carousel {
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    background: rgb(99, 230, 88);
+    background: linear-gradient(135deg, rgb(159, 219, 154) 0%, rgb(182, 240, 199) 33%, rgb(131, 185, 171) 66%, rgb(177, 250, 235) 100%);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.home-carousel-item {
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-item-home {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.80) 0%, rgba(0, 0, 0, 0.75) 20%, rgba(255, 255, 255, 0) 100%);
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.carousel-home-text {
+    width: 75%;
+    height: 100%;
+
+    padding: 0 14vw 25vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-home-text a button {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-home-text h3 {
+    font-style: "Nunito Sans", sans-serif;
+    font-size: calc(1.12rem + 1.5vw);
+    line-height: 1em;
+}
+
+.carousel-home-text h6 {
+    font-style: "Nunito Sans", sans-serif;
+    color: rgb(202, 202, 202);
+    font-size: calc(0.7rem + 0.4vw);
+}
+
+.carousel-home-text button {
+    margin: 1vh 0;
+}
+
+.carousel-home-emp {
+    width: 25%;
+    height: 100%;
+    visibility: visible;
 }
 
 /* Donations.html */
@@ -424,6 +527,8 @@ section#donate-page {
     margin: 2vh 0 0vh 0;
     height: 34vh;
     width: 100%;
+
+    border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.678);
 
     color: white;
@@ -440,7 +545,7 @@ section#donate-page {
 .donate-carousel-item {
     height: 100%;
     width: 100%;
-    border-radius: 3px;
+    border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
@@ -451,7 +556,6 @@ section#donate-page {
 #donor1,
 #donor2,
 #donor3 {
-    border-radius: 8px 8px 0 0;
     height: 100%;
     width: 100%;
 }
@@ -545,6 +649,208 @@ section#donate-page {
     width: 100%;
 }
 
+/* About-Us.html */
+.main-section {
+    position: relative;
+    padding: 80px 0;
+    height: 100%;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.main-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.main-section p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.main-section .img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+.main-container {
+    margin: 0 auto;
+    padding: 0 15px;
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-us-container {
+    height: 153vh;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-us-item {
+    width: 50%;
+    height: 100%;
+    padding: 0 2vw;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-us-content {
+    width: 100%;
+    height: 40%;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.about-us-text {
+    width: 100%;
+    height: 60%;
+    margin: 1vh 1vw;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.about-us-text p {
+    font-size: calc(0.5rem + 0.8vw);
+}
+
+.about-us-img {
+    border-radius: 5px;
+}
+
+.mission-image, .vision-image {
+    width: 30vh;
+    height: 30vh;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.business-container {
+    height: 10vh;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.business {
+    padding: 1vw;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.business p {
+    margin: 0;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.team {
+    text-align: center;
+}
+
+.team-members {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    width: 17vw;
+    margin: 10px;
+
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.team-member-img {
+    width: 100%;
+    height: 70%;
+    border-radius: 4px;
+}
+
+.team-member-text {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+.team-member-text h3 {
+    font-size: calc(0.7rem + 1vw);
+}
+
+#tm1 {
+    background: url(images/tm1.jpg);
+}
+#tm2 {
+    background: url(images/tm2.jpg);
+}
+#tm3 {
+    background: url(images/tm3.jpg);
+}
+#tm4 {
+    background: url(images/tm4.jpg);
+}
+#tm5 {
+    background: url(images/tm5.jpg);
+}
+
+#tm1, #tm2, #tm3, #tm4, #tm5 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.slide-up {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.slide-up.active {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 1s, transform 0.5s ease-out;
+}
 
 /* Login.html */
 section.entire-screenwide {
@@ -867,6 +1173,53 @@ section.entire-screenwide {
     font-size: 15px;
 }
 
+/* Contact-Us */
+.contact-page {
+    position: relative;
+    display: flex;
+    padding-top: 60px;
+    
+    justify-content: center;
+    width: auto;
+    align-items: center;
+}
+
+.contact-container {
+    display: flex;
+    padding: 2.5vw;
+    justify-content: center;
+    width: auto;
+    align-items: center;
+}
+
+.contact-info-box {
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.contact-info p {
+    margin: 0;
+}
+
 /* Void.html */
 #void-page {
     position: relative;
@@ -894,13 +1247,18 @@ section.entire-screenwide {
     font-size: calc(0.8rem + 1vw);
 }
 
+#void-text h5 {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: calc(0.7rem + 0.7vw);
+}
+
 #void-text h6 {
     font-size: calc(0.5rem + 0.4vw);
 }
 
 #void-logo {
     width: 18.84vw;
-    height: 5.3vw;
+    height: 5.4vw;
     min-width: 200px;
     min-height: 56.59px;
     background: url(logos/TLB.png);
