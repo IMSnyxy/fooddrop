@@ -147,19 +147,19 @@ body {
 }
 
 #comm1 {
-    background: url(images/comm1.png);
+    background: url(images/comm1.jpg);
 }
 
 #comm2 {
-    background: url(images/comm2.png);
+    background: url(images/comm2.jpg);
 }
 
 #comm3 {
-    background: url(images/comm3.png);
+    background: url(images/comm3.jpg);
 }
 
 #comm4 {
-    background: url(images/comm4.png);
+    background: url(images/comm4.jpg);
 }
 
 #org1 {
@@ -195,7 +195,7 @@ body {
 }
 
 #sur2 {
-    background: url(images/sur2.png);
+    background: url(images/sur2.jpg);
 }
 
 #sur3 {
@@ -203,7 +203,7 @@ body {
 }
 
 #sur4 {
-    background: url(images/sur4.png);
+    background: url(images/sur4.jpg);
 }
 
 #sur5 {
@@ -424,6 +424,7 @@ section#donate-page {
     margin: 2vh 0 0vh 0;
     height: 34vh;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.678);
 
     color: white;
     font-family: "Nunito Sans", sans-serif;
