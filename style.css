@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     background-color: rgb(240, 255, 241);
 }
@@ -70,6 +74,10 @@ body {
     font-style: "Nunito Sans", sans-serif;
     color: rgb(202, 202, 202);
     font-size: calc(0.5rem + 0.4vw);
+}
+
+.carousel-item-text button {
+    margin: 1vh 0;
 }
 
 .carousel-item-emp {
@@ -308,7 +316,7 @@ body {
     position: absolute;
 
     height: 100%;
-    width: 100%;
+    width: 45vw;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
