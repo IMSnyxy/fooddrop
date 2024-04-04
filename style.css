@@ -5,6 +5,7 @@
 
 a {
     text-decoration: none;
+    color: white;
 }
 
 body {
@@ -24,6 +25,13 @@ body {
 .mobile-view {
     display: none;
     visibility: collapse;
+}
+
+.dm {
+    margin: 0 auto;
+    padding: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 /* Carousel */
@@ -152,7 +160,7 @@ body {
 }
 
 #home1 {
-    background: url(images/home1.png);
+    background: url(images/home1.jpg);
 }
 
 #home2 {
@@ -900,6 +908,19 @@ section.entire-screenwide {
     justify-content: center;
 }
 
+#signup {
+    background: linear-gradient(135deg, rgba(99, 230, 88, 1) 0%, rgba(101, 244, 141, 1) 33%, rgba(76, 235, 192, 1) 66%, rgba(133, 255, 231, 1) 100%);
+}
+
+#signup-container {
+    position: relative;
+    width: 50%;
+    height: 90%;
+
+    display: flex;
+    justify-content: center;
+}
+
 #login-card {
     position: relative;
     padding: 2.14vh 4.39vw;
@@ -930,6 +951,7 @@ section.entire-screenwide {
     justify-content: flex-end;
 }
 
+#username,
 #email,
 #password {
     border: solid 2px white;
@@ -942,11 +964,13 @@ section.entire-screenwide {
     z-index: 5;
 }
 
+#username::placeholder,
 #email::placeholder,
 #password::placeholder {
     color: rgb(64, 65, 64);
 }
 
+#username:focus,
 #email:focus,
 #password:focus {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -970,9 +994,14 @@ section.entire-screenwide {
     color: rgb(56, 56, 56);
 }
 
+#user-error,
 #email-error,
 #pass-error {
     visibility: collapse;
+}
+
+.pass-valid {
+    font-size: 0.68em;
 }
 
 .form-check {
@@ -1192,7 +1221,7 @@ section.entire-screenwide {
     align-items: center;
 }
 
-.contact-info-box {
+#contact-info-box {
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     padding: 40px;
@@ -1263,4 +1292,8 @@ section.entire-screenwide {
     min-height: 56.59px;
     background: url(logos/TLB.png);
     background-size: cover;
+}
+
+#dark-mode {
+    background: linear-gradient(90deg, rgba(78,106,82,1) 0%, rgba(80,108,95,0.6587009803921569) 33%, rgba(74,102,95,1) 66%, rgba(78,110,108,0) 100%);
 }

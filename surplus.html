@@ -37,6 +37,8 @@
             margin: 0;
         }
     </style>
+    <!-- Modular Scripts -->
+    <script type="module" src="dark-mode.js"></script>
 </head>
 
 <body>
@@ -46,8 +48,11 @@
                 <img src="logos/TLW.png" width="159.57px" height="45px" style="margin: 0vh 1.5vw;">
             </div>
             <div class="navbar-section">
-                <a href="login.html"><button type="button" class="btn btn-outline-light nav-login"><b>Log
-                            In</b></button></a>
+                <button class="btn btn-outline-light dm" onclick="toggleDarkMode()"><span class="material-symbols-outlined">
+                    dark_mode
+                    </span></button>
+                <button type="button" class="btn btn-outline-light nav-login"><a href="login.html"><b>Log
+                            In</b></a></button>
             </div>
         </div>
         <div class="navbar-links">
@@ -146,7 +151,7 @@
                                     Drix Molina”</i></p>
                         </section>
 
-                        <a href="sur1.html" class="btn btn-success">View</a>
+                        <a href="#" class="btn btn-success">View</a>
                     </div>
                 </div>
                 <div class="card donate-card">
@@ -161,7 +166,7 @@
                                     kaldereta, sinigang, at iba pa.”</i></p>
                         </section>
 
-                        <a href="void.html" class="btn btn-success">View</a>
+                        <a href="#" class="btn btn-success">View</a>
                     </div>
                 </div>
                 <div class="card donate-card">
@@ -176,7 +181,7 @@
                                     manok, isda, baboy. Tas may sizzling rito.”</i></p>
                         </section>
 
-                        <a href="void.html" class="btn btn-success">View</a>
+                        <a href="#" class="btn btn-success">View</a>
                     </div>
                 </div>
                 <div class="card donate-card">
@@ -191,7 +196,7 @@
                                     mura lang po.”</i></p>
                         </section>
 
-                        <a href="void.html" class="btn btn-success">View</a>
+                        <a href="#" class="btn btn-success">View</a>
                     </div>
                 </div>
                 <div class="card donate-card">
@@ -321,6 +326,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="clamp.js"></script>
     <script src="fooddrop.js"></script>
+    <script src="dark-mode.js"></script>
 </body>
 
 </html>

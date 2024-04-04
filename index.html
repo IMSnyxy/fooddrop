@@ -55,17 +55,23 @@
             }
         }
     </style>
+    <!-- Modular Scripts -->
+    <script type="module" src="dark-mode.js"></script>
 </head>
 
 <body>
-    <nav class="navbar-container home-page" id="navbarSupportedContent">
+    <nav class="navbar-container" id="navbarSupportedContent">
         <div class="navbar-edges">
             <div class="navbar-section">
                 <img src="logos/TLW.png" width="159.57px" height="45px" style="margin: 0vh 1.5vw;">
             </div>
             <div class="navbar-section">
-                <a href="login.html"><button type="button" class="btn btn-outline-light nav-login"><b>Log
-                            In</b></button></a>
+                <button class="btn btn-outline-light dm" onclick="toggleDarkMode()"><span
+                        class="material-symbols-outlined">
+                        dark_mode
+                    </span></button>
+                <button type="button" class="btn btn-outline-light nav-login"><a href="login.html"><b>Log
+                            In</b></a></button>
             </div>
         </div>
         <div class="navbar-links">
@@ -113,7 +119,7 @@
                                 from hunger. Together, we can end food insecurity and hunger with every donation
                                 that you can make.</h6>
                             <a href="donations.html">
-                                    <button type="button" class="btn btn-outline-light">Go to Donation Hub</button></a>
+                                <button type="button" class="btn btn-outline-light">Go to Donation Hub</button></a>
                         </div>
                         <div class="carousel-home-emp">
                         </div>
@@ -125,10 +131,12 @@
                     <div class="carousel-item-home">
                         <div class="carousel-home-text">
                             <h3>Save More, Eat Well</h3>
-                            <h6>Save money by buying surplus food for cheaper. FoodDrop aims to reduce food wastage from overproduction and unsold surplus by encouraging not to throw them away and instead selling them for people who are willing to save money for cheaper meals.
+                            <h6>Save money by buying surplus food for cheaper. FoodDrop aims to reduce food wastage from
+                                overproduction and unsold surplus by encouraging not to throw them away and instead
+                                selling them for people who are willing to save money for cheaper meals.
                             </h6>
                             <a href="surplus.html">
-                                    <button type="button" class="btn btn-outline-light">Go to Surplus Market</button></a>
+                                <button type="button" class="btn btn-outline-light">Go to Surplus Market</button></a>
                         </div>
                         <div class="carousel-home-emp">
                         </div>
@@ -140,8 +148,10 @@
                     <div class="carousel-item-home">
                         <div class="carousel-home-text">
                             <h3>Making an impact for the community</h3>
-                            <h6>FoodDrop allows you to buy surplus food to prevent food wastage and donate them to the hungry communities. Together, we can end food insecurity and hunger with every donation
-                                that you can make. Every action, every donation - a step closer to ending food insecurity and hunger.</h6>
+                            <h6>FoodDrop allows you to buy surplus food to prevent food wastage and donate them to the
+                                hungry communities. Together, we can end food insecurity and hunger with every donation
+                                that you can make. Every action, every donation - a step closer to ending food
+                                insecurity and hunger.</h6>
                         </div>
                         <div class="carousel-home-emp">
                         </div>
@@ -168,8 +178,8 @@
                         <div class="carousel-home-text">
                             <h3>Direct with us</h3>
                             <h6>Willing to help achieve our cause? Here are our contacts:</h6>
-                                <a href="donations.html">
-                                    <button type="button" class="btn btn-outline-light">Contact Us</button></a>
+                            <a href="donations.html">
+                                <button type="button" class="btn btn-outline-light">Contact Us</button></a>
                         </div>
                         <div class="carousel-home-emp">
                         </div>
@@ -190,6 +200,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="clamp.js"></script>
+    <script src="fooddrop.js"></script>
+    <script src="dark-mode.js"></script>
 </body>
 
 </html>

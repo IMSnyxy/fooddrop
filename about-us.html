@@ -38,6 +38,8 @@
         }
     </style>
 
+    <!-- Modular Scripts -->
+    <script type="module" src="dark-mode.js"></script>
 </head>
 
 <body>
@@ -47,8 +49,11 @@
                 <img src="logos/TLW.png" width="159.57px" height="45px" style="margin: 0vh 1.5vw;">
             </div>
             <div class="navbar-section">
-                <a href="login.html"><button type="button" class="btn btn-outline-light nav-login"><b>Log
-                            In</b></button></a>
+                <button class="btn btn-outline-light dm" onclick="toggleDarkMode()"><span class="material-symbols-outlined">
+                    dark_mode
+                    </span></button>
+                <button type="button" class="btn btn-outline-light nav-login"><a href="login.html"><b>Log
+                            In</b></a></button>
             </div>
         </div>
         <div class="navbar-links">
@@ -70,18 +75,18 @@
         </div>
     </nav>
 
-    <main>
+    <main class="main-page">
         <section class="main-section">
             <div class="main-container">
                 <div id="void-logo"></div>
                 <div class="about-us-container">
                     <div class="about-us-item">
                         <div class="about-us-content slide-up">
-                            <h2>Our Mission</h2>
+                            <h2 class="dm-invert">Our Mission</h2>
                             <div class="about-us-img" id="donor3"></div>
                         </div>
                         <div class="about-us-text slide-up">
-                            <p>Our mission is to be a catalyst for positive change within the food system. We strive to
+                            <p class="dm-invert">Our mission is to be a catalyst for positive change within the food system. We strive to
                                 create a world where the abundance of delicious, nutritious food is not wasted, but
                                 instead serves to nourish communities and protect our planet. By fostering a network of
                                 conscious consumers, responsible businesses, and dedicated organizations, we aim to
@@ -102,11 +107,11 @@
                     </div>
                     <div class="about-us-item">
                         <div class="about-us-content slide-up">
-                            <h2>Our Vision</h2>
+                            <h2 class="dm-invert">Our Vision</h2>
                             <div class="about-us-img" id="donor2"></div>
                         </div>
                         <div class="about-us-text slide-up">
-                            <p>We envision a world where the abundance of food is valued and celebrated, not squandered.
+                            <p class="dm-invert">We envision a world where the abundance of food is valued and celebrated, not squandered.
                                 A world where every plate overflows with fresh, nutritious options, accessible to all
                                 regardless of income or circumstance. We dream of a future where landfills are no longer
                                 overflowing with discarded food, but instead, vibrant compost nourishes the earth,
@@ -130,62 +135,62 @@
 
                 <div class="business-container">
                     <div class="business text-center slide-up">
-                        <h3>Years in Business</h3>
-                        <p>10+</p>
+                        <h3 class="dm-invert">Years in Business</h3>
+                        <p class="dm-invert">10+</p>
                     </div>
                     <div class="business text-center slide-up">
-                        <h3>Satisfied Customers</h3>
-                        <p>1000+</p>
+                        <h3 class="dm-invert">Satisfied Customers</h3>
+                        <p class="dm-invert">1000+</p>
                     </div>
                     <div class="business text-center slide-up">
-                        <h3>Total Sales</h3>
-                        <p>₱1.2M+</p>
+                        <h3 class="dm-invert">Total Sales</h3>
+                        <p class="dm-invert">₱1.2M+</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="team">
-            <h2>Project Members</h2>
+            <h2 dm-invert>Project Members</h2>
             <div class="team-members">
                 <div class="team-member">
                     <div class="team-member-img" id="tm1">
                     </div>
                     <div class="team-member-text">
-                        <h3>Brandon Padigos</h3>
-                        <p>Website Developer, Design Thinker & Project Manager</p>
+                        <h3 class="dm-invert">Brandon Padigos</h3>
+                        <p class="dm-invert"> Website Developer, Design Thinker & Project Manager</p>
                     </div>
                 </div>
                 <div class="team-member">
                     <div class="team-member-img" id="tm2">
                     </div>
                     <div class="team-member-text">
-                        <h3>Yoshiki Makino</h3>
-                        <p>Website Developer, Design Thinker</p>
+                        <h3 class="dm-invert">Yoshiki Makino</h3>
+                        <p class="dm-invert">Website Developer, Design Thinker</p>
                     </div>
 
                 </div>
                 <div class="team-member">
                     <div class="team-member-img" id="tm3"></div>
                     <div class="team-member-text">
-                        <h3>Kier Louie Ricarte</h3>
-                        <p>Website Developer, Design Thinker</p>
+                        <h3 class="dm-invert">Kier Louie Ricarte</h3>
+                        <p class="dm-invert">Website Developer, Design Thinker</p>
                     </div>
 
                 </div>
                 <div class="team-member">
                     <div class="team-member-img" id="tm4"></div>
                     <div class="team-member-text">
-                        <h3>Bobstrell Flormata</h3>
-                        <p>Website Developer, Design Thinker</p>
+                        <h3 class="dm-invert">Bobstrell Flormata</h3>
+                        <p class="dm-invert">Website Developer, Design Thinker</p>
                     </div>
 
                 </div>
                 <div class="team-member">
                     <div class="team-member-img" id="tm5"></div>
                     <div class="team-member-text">
-                        <h3>Jacob Atienza</h3>
-                        <p>Website Developer, Design Thinker</p>
+                        <h3 class="dm-invert">Jacob Atienza</h3>
+                        <p class="dm-invert">Website Developer, Design Thinker</p>
                     </div>
 
                 </div>
@@ -199,6 +204,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="clamp.js"></script>
     <script src="fooddrop.js"></script>
+    <script src="dark-mode.js"></script>
 </body>
 
 </html>
