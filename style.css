@@ -325,10 +325,25 @@ body {
     background: rgb(99, 230, 88);
     background: linear-gradient(135deg, rgba(99, 230, 88, 1) 0%, rgba(101, 244, 141, 1) 33%, rgba(76, 235, 192, 1) 66%, rgb(110, 230, 206) 100%);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
 }
 
-.navbar-container.home-page {
+.navbar-container.dark-mode {
+    background: linear-gradient(90deg, rgba(78,106,82,1) 0%, rgba(80,108,95,1) 33%, rgba(74,102,95,1) 66%, rgba(78,110,108,1) 100%);
+}
+
+.navbar-container-home {
+    font-family: "Garet";
+    margin: 0 auto;
+    position: fixed;
+
+    z-index: 999;
+
+    display: flex;
+    justify-content: center;
+
+    height: 60px;
+    width: 100%;
+    background: rgb(99, 230, 88);
     background: linear-gradient(135deg, rgba(100, 230, 88, 0.911) 0%, rgba(101, 244, 141, 0.89) 33%, rgba(76, 235, 192, 0.89) 66%, rgba(116, 255, 227, 0.5) 100%);
     box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 25px -5px, rgba(0, 0, 0, 0.14) 0px 10px 10px -5px;
 }

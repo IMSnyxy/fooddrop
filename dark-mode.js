@@ -1,3 +1,18 @@
+function applyMode() {
+    var mode = localStorage.getItem("mode");
+    if (mode === "dark") {
+        darkMode();
+    } else {
+        lightMode();
+    }
+}
+
+applyMode();
+
+document.addEventListener("DOMContentLoaded", function() {
+    applyMode();
+});
+
 function toggleDarkMode() {
     var mode = localStorage.getItem("mode");
     if (mode === "dark") {
@@ -8,26 +23,18 @@ function toggleDarkMode() {
     applyMode();
 }
 
-function applyMode() {
-    var mode = localStorage.getItem("mode");
-    if (mode === "dark") {
-        darkMode();
-    } else {
-        lightMode();
-    }
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-    applyMode();
-});
-
 function darkMode() {
     var body = document.body;
     body.style.backgroundColor = "rgb(32, 34, 32)";
 
     var navbarContainers = document.getElementsByClassName('navbar-container');
     for (var i = 0; i < navbarContainers.length; i++) {
-        navbarContainers[i].style.background = "linear-gradient(90deg, rgba(78,106,82,1) 0%, rgba(80,108,95,1) 33%, rgba(74,102,95,1) 66%, rgba(78,110,108,1) 100%)";
+        navbarContainers[i].classList.add('dark-mode');
+    }
+
+    var navbarContainerHome = document.getElementsByClassName('navbar-container-home');
+    for (var i = 0; i < navbarContainerHome.length; i++) {
+        navbarContainerHome[i].style.background = "linear-gradient(90deg, rgba(78,106,82,0.911) 0%, rgba(80,108,95,0.89) 33%, rgba(74,102,95,0.89) 66%, rgba(78,110,108,0.5) 100%)";
     }
 
     var donoCard = document.getElementsByClassName('donate-card');
@@ -99,14 +106,17 @@ function darkMode() {
 }
 
 function lightMode() {
-    console.log("it works huh???")
-
     var body = document.body;
     body.style.backgroundColor = "rgb(240, 255, 241)";
 
     var navbarContainers = document.getElementsByClassName('navbar-container');
     for (var i = 0; i < navbarContainers.length; i++) {
-        navbarContainers[i].style.background = "linear-gradient(135deg, rgba(99, 230, 88, 1) 0%, rgba(101, 244, 141, 1) 33%, rgba(76, 235, 192, 1) 66%, rgb(110, 230, 206) 100%)";
+        navbarContainers[i].classList.remove('dark-mode');
+    }
+
+    var navbarContainerHome = document.getElementsByClassName('navbar-container-home');
+    for (var i = 0; i < navbarContainerHome.length; i++) {
+        navbarContainerHome[i].style.background = "linear-gradient(135deg, rgba(100, 230, 88, 0.911) 0%, rgba(101, 244, 141, 0.89) 33%, rgba(76, 235, 192, 0.89) 66%, rgba(116, 255, 227, 0.5) 100%)";
     }
 
     var donoCard = document.getElementsByClassName('donate-card');
